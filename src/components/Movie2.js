@@ -1,5 +1,4 @@
 import PropTypes from "prop-types"
-import { useEffect } from "react"
 
 Movie.propTypes = {
     title: PropTypes.string.isRequired,
@@ -10,23 +9,21 @@ Movie.propTypes = {
 }
 
 function Movie({ title, year, medium_cover_image, genres, summary }) {
-    const onError = (e) => {
-        e.target.src = "./404.jpg"
-    }
-    // useEffect(() => {
-    //     onError()
-    // }, [])
+    // const onError = (e) => {
+    //     e.target.src = "./404.jpg"
+    // }
 
     return (
         <div>
             <h3>{title} ({year})</h3>
-            <img src={medium_cover_image} alt={medium_cover_image} onError={onError} />
-            {genres !== null ?
-                <ul>
-                    {genres.map((g) => (
-                        <li key={g}> {g} </li>
-                    ))}
-                </ul> : null}
+            <img src={medium_cover_image} alt={medium_cover_image} />
+            {/* {genres !== null ? */}
+            <ul>
+                {genres.map((g) => (
+                    <li key={g}> {g} </li>
+                ))}
+            </ul>
+            {/* : null} */}
             <p>{summary}</p>
         </div>
     )
