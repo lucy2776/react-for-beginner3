@@ -12,3 +12,6 @@ root.render(
     <Movie />
   </div>
 );
+
+// package.jon
+// script 실행 -> 웹사이트의 production ready code(코드 압축, 최적화)

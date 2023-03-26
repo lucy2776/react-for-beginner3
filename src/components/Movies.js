@@ -23,7 +23,7 @@ function Movie2({ id, title, year, medium_cover_image, genres, summary }) {
         <div>
             <h3 className="title">
                 <Link
-                    to={`/movie/${id}`}
+                    basename={`${process.env.PUBLIC_URL}/movie/${id}`}
                     style={{
                         textDecoration: "none",
                         color: "black",

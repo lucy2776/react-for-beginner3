@@ -2,10 +2,6 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import MovieDetail from "../components/MovieDetail"
 
-import '../css/Detail.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { } from 'react-bootstrap'
-
 function Detail() {
     const { id } = useParams()
 
