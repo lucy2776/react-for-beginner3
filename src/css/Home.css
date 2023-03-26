@@ -1,0 +1,26 @@
+body{
+    padding: 20px;
+}
+
+.title{
+    margin: 0;
+    padding: 20px 0;
+}
+
+.imgAndGenres{
+    display: flex;
+}
+.genres{
+    padding: 10px 20px;
+
+    font-size: 20px;
+}
+.genresInfo{
+    padding: 0 50px;
+}
+.summary{
+    margin: 0;
+    padding: 20px 0;
+
+    font-size: 18px;
+}

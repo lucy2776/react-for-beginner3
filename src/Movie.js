@@ -1,8 +1,25 @@
-function App() {
-    return null
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+} from "react-router-dom"
+import Home from "./routes/Home"
+import Detail from "./routes/Detail"
+
+function Movie() {
+    return (
+        <div className="container">
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/movie/:id" element={<Detail />} />
+                </Routes>
+            </Router>
+        </div>
+    );
 }
 
-export default App;
+export default Movie;
 
 
 

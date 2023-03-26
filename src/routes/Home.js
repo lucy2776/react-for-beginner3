@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import Movie from "../components/Movie2"
+import Movies from "../components/Movies"
 
 function Home() {
     const [loading, setLoading] = useState(true)
@@ -30,15 +30,22 @@ function Home() {
 
     return (
         <div>
-            <h1>Movie</h1>
+            <h1 style={{
+                margin: 0,
+                padding: "20px",
+                textAlign: "center"
+            }}>
+                🎬 Movie List 🎬
+            </h1>
             {loading ? (<h2>Loading...</h2>) : (
                 movies.map((movie) => (
-                    <Movie key={movie.id}
-                        title={movie.title} year={movie.year} medium_cover_image={movie.medium_cover_image}
+                    <Movies key={movie.id} id={movie.id}
+                        title={movie.title} year={movie.year}
+                        medium_cover_image={movie.medium_cover_image}
                         genres={movie.genres} summary={movie.summary} />
                     // key : React.js에서만, map안에서 component들을 render할 때 사용
-                )
-                ))}
+                ))
+            )}
         </div>
     )
 }
