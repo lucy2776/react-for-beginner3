@@ -9,6 +9,7 @@ root.render(
   <div>
     {/* <ToDoList /> */}
     {/* <CoinTracker /> */}
+    <h1>Hello</h1>
     <Movie />
   </div>
 );
