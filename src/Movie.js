@@ -8,11 +8,11 @@ import Detail from "./routes/Detail"
 
 function Movie() {
     return (
-        <div className="container">
+        <div>
             <Router>
                 <Routes>
-                    <Route path={`${process.env.PUBLIC_URL}/movie/:id`} element={<Home />} />
-                    <Route path={`${process.env.PUBLIC_URL}/`} element={<Detail />} />
+                    <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
+                    <Route path={`${process.env.PUBLIC_URL}/movie/:id`} element={<Detail />} />
                 </Routes>
             </Router>
         </div>

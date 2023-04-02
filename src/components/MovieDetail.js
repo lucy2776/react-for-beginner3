@@ -11,18 +11,19 @@ MovieDetail.propTypes = {
     genres: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
-function MovieDetail({ title, year, medium_cover_image, download_count, genres, summary, description_intro, description_full }) {
+function MovieDetail({ title, year, medium_cover_image, rating, download_count, genres, summary, description_intro, description_full }) {
     // const onError = (e) => {
     //     e.target.src = "./404.jpg"
     // }
 
     return (
-        <div>
+        <div className="container">
             <h1 className="Dtitle"><b>📽 {title} ({year})</b></h1>
             <div className="DimgAndGenres">
                 <img src={medium_cover_image} alt={medium_cover_image} />
                 <div className="Dgenres">
                     <p className="downloadCountT">Download Count : <b className="downloadCountC">{download_count}</b></p>
+                    <p>⭐ {rating}</p>
                     <div>
                         <span>📢</span>
                         {genres.map((g) => (
@@ -31,9 +32,10 @@ function MovieDetail({ title, year, medium_cover_image, download_count, genres, 
                     </div>
                 </div>
             </div>
-            <h4>🖋 Description Intro</h4>
+            <h4 className="Description">🖋 Description Intro</h4>
             <p>&nbsp;{description_intro}</p>
-            <h4>🖋 Description Full</h4>
+            <br />
+            <h4 className="Description">🖋 Description Full</h4>
             <p>&nbsp;{description_full}</p>
         </div>
     )

@@ -1,14 +1,60 @@
-body{
+.movieList{
+    margin: auto;
     padding: 20px;
+
+    width: 1020px;
+    
+    text-align: center;
+    border-radius: 20px;
+
+    background-color: rgb(255, 200, 200);
+}
+@media (max-width: 1024px) {
+    .movieList{
+        width: 476px;
+    }
+}
+
+.loading{
+    padding: 100px;
+
+    text-align: center;
+}
+
+.movieOne{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.eachOther{
+    margin: 20px;
+    padding: 0 20px 20px 20px;
+
+    width: 500px;
+
+    border-radius: 20px;
+
+    color: rgb(61, 61, 61);
+    background-color: rgb(255, 233, 233);
 }
 
 .title{
     margin: 0;
     padding: 20px 0;
+
+    color: white;
 }
 
 .imgAndGenres{
     display: flex;
+}
+.rating{
+    padding: 10px 20px;
+
+    font-size: 20px;
 }
 .genres{
     padding: 10px 20px;

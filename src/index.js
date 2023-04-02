@@ -6,10 +6,9 @@ import Movie from './Movie';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div>
+  <div style={{ backgroundColor: "rgb(255, 244, 244)" }}>
     {/* <ToDoList /> */}
     {/* <CoinTracker /> */}
-    <h1>Hello</h1>
     <Movie />
   </div>
 );

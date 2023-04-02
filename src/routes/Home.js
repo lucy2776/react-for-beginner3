@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react"
 import Movies from "../components/Movies"
 
+import '../css/Home.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { } from 'react-bootstrap'
+
 function Home() {
     const [loading, setLoading] = useState(true)
     const [movies, setMovies] = useState([])
@@ -29,25 +33,26 @@ function Home() {
     console.log(movies)
 
     return (
-        <div>
-            <h1 style={{
-                margin: 0,
-                padding: "20px",
-                textAlign: "center"
-            }}>
+        <div className="container">
+            <h1 className="movieList">
                 🎬 Movie List 🎬
             </h1>
-            {loading ? (<h2>Loading...</h2>) : (
-                movies.map((movie) => (
-                    <Movies key={movie.id} id={movie.id}
-                        title={movie.title} year={movie.year}
-                        medium_cover_image={movie.medium_cover_image}
-                        genres={movie.genres} summary={movie.summary} />
-                    // key : React.js에서만, map안에서 component들을 render할 때 사용
-                ))
-            )}
+            <div className="movieOne">
+                {loading ? (<h2 className="loading">Loading...</h2>) : (
+                    movies.map((movie) => (
+                        <Movies key={movie.id} id={movie.id}
+                            title={movie.title} year={movie.year}
+                            medium_cover_image={movie.medium_cover_image}
+                            rating={movie.rating}
+                            genres={movie.genres}
+                            summary={movie.summary}
+                        />
+                    ))
+                )}
+            </div>
         </div>
     )
+    // key : React.js에서만, map안에서 component들을 render할 때 사용
 }
 
 export default Home;

@@ -26,11 +26,12 @@ function Detail() {
 
     return (
         <div>
-            {loading ? (<h2>Loading...</h2>) : (
+            {loading ? (<h2 className="loading">Loading...</h2>) : (
                 <MovieDetail
                     title={detail.title} year={detail.year}
                     download_count={detail.download_count}
                     medium_cover_image={detail.medium_cover_image}
+                    rating={detail.rating}
                     genres={detail.genres}
                     description_intro={detail.description_intro}
                     description_full={detail.description_full} />
