@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 // import ToDoList from './ToDoList';
 // import CoinTracker from './CoinTracker';
-import Movie from './Movie';
+import Movie from './Movie.js';
+
+import 'bootstrap/dist/css/bootstrap.css';
+import './css/index.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div style={{ backgroundColor: "rgb(255, 244, 244)" }}>
+  <div>
+    <Movie />
+
     {/* <ToDoList /> */}
     {/* <CoinTracker /> */}
-    <Movie />
-  </div>
+  </div >
 );
 
 // package.jon

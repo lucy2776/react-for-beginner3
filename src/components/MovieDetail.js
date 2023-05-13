@@ -1,8 +1,6 @@
 import PropTypes from "prop-types"
 
 import '../css/Detail.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { } from 'react-bootstrap'
 
 MovieDetail.propTypes = {
     title: PropTypes.string.isRequired,

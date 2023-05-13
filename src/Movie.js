@@ -3,18 +3,62 @@ import {
     Routes,
     Route,
 } from "react-router-dom"
-import Home from "./routes/Home"
-import Detail from "./routes/Detail"
+
+import Home from "./routes/Home.js"
+import Detail from "./routes/Detail.js"
+import { useEffect } from "react";
+
+import insta from './img/insta.png'
 
 function Movie() {
+    useEffect(() => {
+        const footer = document.querySelector('footer');
+        if (Route === null) {
+            footer.classList.add('no-content');
+        }
+    }, []);
+
     return (
         <div>
+            <header>
+                <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+                    <ul className="navbar-nav">
+                        <a className="navbar-brand EUNFLEX" href="/">
+                            EUNFLEX
+                        </a>
+                    </ul>
+                </nav>
+            </header>
+
             <Router>
                 <Routes>
-                    <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
-                    <Route path={`${process.env.PUBLIC_URL}/movie/:id`} element={<Detail />} />
+                    <Route path={`/`} element={<Home />} />
+                    <Route path={`/movie/:id`} element={<Detail />} />
                 </Routes>
             </Router>
+
+            <footer className={`footer ${Movie ? 'footerBottom' : ''}`}>
+                <div>
+                    <ul>
+                        <a href='#'> 고객센터 </a> |
+                        <a href='#'> 이용약관 </a> |
+                        <a href='#'> 개인정보처리방침 </a>
+                    </ul>
+                    <br />
+
+                    <div>
+                        <b> 이정은 </b><br />
+                        email: <b> lucy2776@naver.com </b> | instagram:
+                        &nbsp;
+                        <a href='https://www.instagram.com/jung__eun007/'>
+                            <img src={insta} alt='instagram' className='insta' />
+                        </a>
+                    </div>
+                    <br />
+
+                    <span>copyright © EUNFLEX All rights reserved.</span>
+                </div>
+            </footer>
         </div>
     );
 }

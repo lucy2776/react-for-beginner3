@@ -1,17 +1,6 @@
-html{
-    margin: 20px;
-
-    color: rgb(61, 61, 61);
-    background-color: rgb(255, 244, 244);
-}
-
 .Dtitle{
     padding: 20px;
     text-align: center;
-
-    border-radius: 20px;
-
-    background-color: rgb(255, 200, 200);
 }
 
 .DimgAndGenres{
@@ -36,8 +25,4 @@ html{
 .Description{
     padding: 10px;
     height: 50px;
-    
-    border-radius: 20px;
-
-    background-color: rgb(255, 200, 200);
 }

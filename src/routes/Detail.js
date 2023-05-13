@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import MovieDetail from "../components/MovieDetail"
+
+import MovieDetail from "../components/MovieDetail.js"
 
 function Detail() {
     const { id } = useParams()
@@ -36,6 +37,7 @@ function Detail() {
                     description_intro={detail.description_intro}
                     description_full={detail.description_full} />
             )}
+            <br />
         </div>
     )
 }
