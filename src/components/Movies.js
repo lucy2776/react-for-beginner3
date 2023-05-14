@@ -1,9 +1,9 @@
 import PropTypes from "prop-types"
 
+import { useState } from "react";
 import { Link } from "react-router-dom"
 
 import '../css/Home.css'
-import { useState } from "react";
 
 Movie2.propTypes = {
     id: PropTypes.number.isRequired,

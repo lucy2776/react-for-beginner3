@@ -3,31 +3,21 @@ import Movies from "../components/Movies.js"
 import { useEffect, useState } from "react"
 import '../css/Home.css'
 
-import axios from 'axios';
-
-axios.get('https://yts.mx/api/v2/list_movies.json', { withCredentials: true })
-    .then(response => {
-        console.log(response.data);
-    })
-    .catch(error => {
-        console.log(error);
-    })
-
 function Home() {
     const [loading, setLoading] = useState(true)
     const [movies, setMovies] = useState([])
 
-    useEffect(() => {
-        const getMovies = async () => {
-            const json = await (
-                await fetch(
-                    `https://yts.mx/api/v2/list_movies.json`, { mode: "cors" }
-                )
-            ).json()
-            setMovies(json.data.movies)
-            setLoading(false)
-        }
+    const getMovies = async () => {
+        const json = await (
+            await fetch(
+                `https://yts.mx/api/v2/list_movies.json`
+            )
+        ).json()
+        setMovies(json.data.movies)
+        setLoading(false)
+    }
 
+    useEffect(() => {
         getMovies()
     }, [])
 

@@ -3,13 +3,13 @@ import {
     Routes,
     Route,
 } from "react-router-dom"
+import { useEffect } from "react";
 
 import Home from "./routes/Home.js"
 import Detail from "./routes/Detail.js"
-import { useEffect } from "react";
+import ScrollToTop from "./ScrollTop.js";
 
 import insta from './img/insta.png'
-import ScrollToTop from "./ScrollTop.js";
 
 function Movie() {
     useEffect(() => {
