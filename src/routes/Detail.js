@@ -3,8 +3,24 @@ import { useParams } from "react-router-dom"
 
 import MovieDetail from "../components/MovieDetail.js"
 
+import axios from 'axios';
+
+
 function Detail() {
     const { id } = useParams()
+
+    const API_URL = `https://yts.mx/api/v2/movie_details.json?movie_id=${id}`;
+
+    // GET 요청 예시
+    axios.get(API_URL)
+        .then(response => {
+            // 성공적으로 응답 받은 경우
+            console.log(response.data);
+        })
+        .catch(error => {
+            // 에러 발생한 경우
+            console.error(error);
+        });
 
     const [loading, setLoading] = useState(true)
     const [detail, setDetail] = useState()

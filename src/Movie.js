@@ -31,13 +31,6 @@ function Movie() {
                 </nav>
             </header>
 
-            {/* <Router basename={process.env.PUBLIC_URL}>
-                <ScrollToTop />
-                <Routes>
-                    <Route path={`/`} element={<Home />} />
-                    <Route path={`/movie/:id`} element={<Detail />} />
-                </Routes>
-            </Router> */}
             <Router>
                 <ScrollToTop />
                 <Routes>
@@ -45,6 +38,14 @@ function Movie() {
                     <Route path={`/movie/:id`} element={<Detail />} />
                 </Routes>
             </Router>
+
+            {/* <Router basename={process.env.PUBLIC_URL}>
+                <ScrollToTop />
+                <Routes>
+                    <Route path={`/`} element={<Home />} />
+                    <Route path={`/movie/:id`} element={<Detail />} />
+                </Routes>
+            </Router> */}
 
             <footer className='footer'>
                 <div>
