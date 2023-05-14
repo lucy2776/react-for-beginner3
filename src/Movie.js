@@ -9,6 +9,7 @@ import Detail from "./routes/Detail.js"
 import { useEffect } from "react";
 
 import insta from './img/insta.png'
+import ScrollToTop from "./ScrollTop.js";
 
 function Movie() {
     useEffect(() => {
@@ -31,6 +32,7 @@ function Movie() {
             </header>
 
             <Router>
+                <ScrollToTop />
                 <Routes>
                     <Route path={`/`} element={<Home />} />
                     <Route path={`/movie/:id`} element={<Detail />} />
