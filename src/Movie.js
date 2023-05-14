@@ -31,7 +31,7 @@ function Movie() {
                 </nav>
             </header>
 
-            <Router basename="{process.env.PUBLIC_URL">
+            <Router basename={process.env.PUBLIC_URL}>
                 <ScrollToTop />
                 <Routes>
                     <Route path={`/`} element={<Home />} />
