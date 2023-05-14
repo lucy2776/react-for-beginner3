@@ -1,7 +1,7 @@
 {
   "name": "lucy2776s_eunflex",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "homepage": "https://lucy2776.github.io/react-for-beginner3/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

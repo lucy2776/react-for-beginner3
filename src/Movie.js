@@ -31,7 +31,14 @@ function Movie() {
                 </nav>
             </header>
 
-            <Router basename={process.env.PUBLIC_URL}>
+            {/* <Router basename={process.env.PUBLIC_URL}>
+                <ScrollToTop />
+                <Routes>
+                    <Route path={`/`} element={<Home />} />
+                    <Route path={`/movie/:id`} element={<Detail />} />
+                </Routes>
+            </Router> */}
+            <Router>
                 <ScrollToTop />
                 <Routes>
                     <Route path={`/`} element={<Home />} />
@@ -39,7 +46,7 @@ function Movie() {
                 </Routes>
             </Router>
 
-            <footer className={`footer ${Movie ? 'footerBottom' : ''}`}>
+            <footer className='footer'>
                 <div>
                     <ul>
                         <a href='/#'> 고객센터 </a> |
