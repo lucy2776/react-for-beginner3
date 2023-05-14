@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-for-beginner3/static/css/main.42920622.css",
-    "main.js": "/react-for-beginner3/static/js/main.53977493.js",
-    "static/media/curtain.png": "/react-for-beginner3/static/media/curtain.0dd8ced45390414f7a08.png",
-    "static/media/insta.png": "/react-for-beginner3/static/media/insta.6030a8815dc4d150b086.png",
-    "index.html": "/react-for-beginner3/index.html",
-    "main.42920622.css.map": "/react-for-beginner3/static/css/main.42920622.css.map",
-    "main.53977493.js.map": "/react-for-beginner3/static/js/main.53977493.js.map"
+    "main.css": "/eunflex/static/css/main.464469b2.css",
+    "main.js": "/eunflex/static/js/main.d08dbd02.js",
+    "static/media/curtain.png": "/eunflex/static/media/curtain.0dd8ced45390414f7a08.png",
+    "static/media/insta.png": "/eunflex/static/media/insta.6030a8815dc4d150b086.png",
+    "index.html": "/eunflex/index.html",
+    "main.464469b2.css.map": "/eunflex/static/css/main.464469b2.css.map",
+    "main.d08dbd02.js.map": "/eunflex/static/js/main.d08dbd02.js.map"
   },
   "entrypoints": [
-    "static/css/main.42920622.css",
-    "static/js/main.53977493.js"
+    "static/css/main.464469b2.css",
+    "static/js/main.d08dbd02.js"
   ]
 }
