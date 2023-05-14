@@ -10,18 +10,19 @@ function Detail() {
     const [detail, setDetail] = useState()
 
     useEffect(() => {
+        const getMovieDetail = async () => {
+            const json = await (
+                await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
+            ).json()
+            setDetail(json.data.movie)
+            setLoading(false)
+
+            console.log(json)
+        }
+
         getMovieDetail();
     }, [id]);
 
-    const getMovieDetail = async () => {
-        const json = await (
-            await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
-        ).json()
-        setDetail(json.data.movie)
-        setLoading(false)
-
-        console.log(json)
-    }
 
     console.log(detail)
 
