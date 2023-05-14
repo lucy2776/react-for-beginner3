@@ -41,5 +41,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://lucy2776.github.io/react-for-beginner3"
+  "homepage": "https://lucy2776.github.io/react-for-beginner3",
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
 }

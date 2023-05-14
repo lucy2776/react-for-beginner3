@@ -3,6 +3,16 @@ import { useParams } from "react-router-dom"
 
 import MovieDetail from "../components/MovieDetail.js"
 
+import axios from 'axios';
+
+axios.get('https://yts.mx/api/v2/list_movies.json', { withCredentials: true })
+    .then(response => {
+        console.log(response.data);
+    })
+    .catch(error => {
+        console.log(error);
+    })
+
 function Detail() {
     const { id } = useParams()
 
@@ -12,7 +22,8 @@ function Detail() {
     useEffect(() => {
         const getMovieDetail = async () => {
             const json = await (
-                await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
+                await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`, { mode: "cors" }
+                )
             ).json()
             setDetail(json.data.movie)
             setLoading(false)
