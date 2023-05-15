@@ -3,25 +3,10 @@ import Movies from "../components/Movies.js"
 import { useEffect, useState } from "react"
 import '../css/Home.css'
 
-import axios from 'axios';
-
-const API_URL = 'https://yts.mx/api/v2/list_movies.json';
-
-// GET 요청 예시
-axios.get(API_URL)
-    .then(response => {
-        // 성공적으로 응답 받은 경우
-        console.log(response.data);
-    })
-    .catch(error => {
-        // 에러 발생한 경우
-        console.error(error);
-    });
 
 function Home() {
     const [loading, setLoading] = useState(true)
     const [movies, setMovies] = useState([])
-
 
     useEffect(() => {
         const getMovies = async () => {
