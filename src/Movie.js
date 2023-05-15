@@ -24,6 +24,7 @@ function Movie() {
             <header>
                 <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
                     <ul className="navbar-nav">
+                        {/* <a className="navbar-brand EUNFLEX" href="/react-for-beginner3"> */}
                         <a className="navbar-brand EUNFLEX" href="/">
                             EUNFLEX
                         </a>
@@ -31,7 +32,8 @@ function Movie() {
                 </nav>
             </header>
 
-            <Router basename={process.env.PUBLIC_URL}>
+            <Router>
+                {/* <Router basename={process.env.PUBLIC_URL}> */}
                 <ScrollToTop />
                 <Routes>
                     <Route path={`/`} element={<Home />} />
